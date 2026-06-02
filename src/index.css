@@ -1,0 +1,196 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@300;400;500;600;700&display=swap');
+
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --font-sans: 'Inter', system-ui, sans-serif;
+  --font-serif: 'Lora', Georgia, 'Times New Roman', serif;
+
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+}
+
+/* ============================================================
+   WARM COZY THEME — terracotta, amber, cream, espresso
+   ============================================================ */
+
+:root {
+  --radius: 0.5rem;
+
+  /* Warm cream parchment */
+  --background: oklch(0.985 0.01 78);
+  --foreground: oklch(0.17 0.035 48);
+
+  /* Slightly warmer off-white */
+  --card: oklch(0.975 0.014 72);
+  --card-foreground: oklch(0.17 0.035 48);
+
+  --popover: oklch(0.975 0.014 72);
+  --popover-foreground: oklch(0.17 0.035 48);
+
+  /* Rich espresso/terracotta — primary CTA */
+  --primary: oklch(0.33 0.085 38);
+  --primary-foreground: oklch(0.975 0.01 75);
+
+  /* Warm sand */
+  --secondary: oklch(0.92 0.028 75);
+  --secondary-foreground: oklch(0.25 0.04 48);
+
+  /* Light warm beige */
+  --muted: oklch(0.935 0.022 72);
+  --muted-foreground: oklch(0.48 0.05 52);
+
+  /* Warm amber accent */
+  --accent: oklch(0.75 0.14 68);
+  --accent-foreground: oklch(0.12 0.03 45);
+
+  --destructive: oklch(0.577 0.245 27.325);
+  --destructive-foreground: oklch(0.985 0 0);
+
+  /* Warm sand borders */
+  --border: oklch(0.87 0.025 70);
+  --input: oklch(0.87 0.025 70);
+  --ring: oklch(0.5 0.08 50);
+
+  /* Chart warm palette */
+  --chart-1: oklch(0.62 0.14 42);
+  --chart-2: oklch(0.72 0.14 68);
+  --chart-3: oklch(0.55 0.10 48);
+  --chart-4: oklch(0.78 0.12 80);
+  --chart-5: oklch(0.50 0.12 35);
+
+  --sidebar: oklch(0.97 0.015 70);
+  --sidebar-foreground: oklch(0.17 0.035 48);
+  --sidebar-primary: oklch(0.33 0.085 38);
+  --sidebar-primary-foreground: oklch(0.975 0.01 75);
+  --sidebar-accent: oklch(0.92 0.028 75);
+  --sidebar-accent-foreground: oklch(0.25 0.04 48);
+  --sidebar-border: oklch(0.87 0.025 70);
+  --sidebar-ring: oklch(0.5 0.08 50);
+}
+
+.dark {
+  /* Deep espresso */
+  --background: oklch(0.135 0.022 43);
+  --foreground: oklch(0.93 0.015 74);
+
+  --card: oklch(0.185 0.024 47);
+  --card-foreground: oklch(0.93 0.015 74);
+
+  --popover: oklch(0.215 0.028 50);
+  --popover-foreground: oklch(0.93 0.015 74);
+
+  /* Warm gold in dark mode */
+  --primary: oklch(0.82 0.13 72);
+  --primary-foreground: oklch(0.135 0.022 43);
+
+  --secondary: oklch(0.24 0.03 47);
+  --secondary-foreground: oklch(0.88 0.015 72);
+
+  --muted: oklch(0.235 0.025 47);
+  --muted-foreground: oklch(0.65 0.04 64);
+
+  --accent: oklch(0.52 0.11 56);
+  --accent-foreground: oklch(0.95 0.015 74);
+
+  --destructive: oklch(0.704 0.191 22.216);
+  --destructive-foreground: oklch(0.985 0 0);
+
+  --border: oklch(1 0 0 / 10%);
+  --input: oklch(1 0 0 / 15%);
+  --ring: oklch(0.58 0.08 60);
+
+  --chart-1: oklch(0.72 0.14 68);
+  --chart-2: oklch(0.62 0.14 42);
+  --chart-3: oklch(0.80 0.12 78);
+  --chart-4: oklch(0.55 0.10 48);
+  --chart-5: oklch(0.48 0.12 35);
+
+  --sidebar: oklch(0.185 0.024 47);
+  --sidebar-foreground: oklch(0.93 0.015 74);
+  --sidebar-primary: oklch(0.82 0.13 72);
+  --sidebar-primary-foreground: oklch(0.135 0.022 43);
+  --sidebar-accent: oklch(0.24 0.03 47);
+  --sidebar-accent-foreground: oklch(0.88 0.015 72);
+  --sidebar-border: oklch(1 0 0 / 10%);
+  --sidebar-ring: oklch(0.58 0.08 60);
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+  }
+  h1, h2, h3 {
+    font-family: var(--font-serif);
+  }
+}
+
+/* Scroll reveal animations */
+.reveal {
+  opacity: 0;
+  transform: translateY(18px);
+  transition: opacity 0.65s ease, transform 0.65s ease;
+}
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+.reveal-delay-1 { transition-delay: 0.1s; }
+.reveal-delay-2 { transition-delay: 0.2s; }
+.reveal-delay-3 { transition-delay: 0.3s; }
+.reveal-delay-4 { transition-delay: 0.4s; }
+.reveal-delay-5 { transition-delay: 0.5s; }
+
+/* Warm ambient glow in hero */
+.warm-glow {
+  background:
+    radial-gradient(ellipse 60% 50% at 15% 60%, oklch(0.72 0.14 68 / 0.08) 0%, transparent 65%),
+    radial-gradient(ellipse 55% 45% at 85% 25%, oklch(0.62 0.14 42 / 0.07) 0%, transparent 65%);
+}
+.dark .warm-glow {
+  background:
+    radial-gradient(ellipse 60% 50% at 15% 60%, oklch(0.82 0.13 72 / 0.06) 0%, transparent 65%),
+    radial-gradient(ellipse 55% 45% at 85% 25%, oklch(0.62 0.14 42 / 0.05) 0%, transparent 65%);
+}
